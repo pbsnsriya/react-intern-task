@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+  font-family: 'Rubik', sans-serif;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Mobile App Frame */
+.mobile-container {
+  width: 375px;
+  height: 812px;
+  background: #f7f7f9;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common padding for pages */
+.page-content {
+  padding: 24px 20px;
+  flex: 1;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1d2226;
+  margin-bottom: 12px;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #8e8e8e;
+  margin-top: 0;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Input Styles */
+.input-fieldset {
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  padding: 0 12px;
+  margin: 0 0 20px 0;
+  position: relative;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.input-fieldset legend {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c25ff;
+  /* purple color for labels */
+  padding: 0 4px;
+  margin-left: 0;
+  background: transparent;
+  line-height: 1;
+}
+
+/* If you want the legend to overlap the border perfectly */
+.input-legend {
+  font-size: 12px;
+  color: #6c25ff;
+  background: #f7f7f9;
+  /* match bg */
+  padding: 0 4px;
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  font-weight: 500;
+}
+
+.input-fieldset input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  padding: 0;
+  font-family: inherit;
+}
+
+.input-fieldset input::placeholder {
+  color: #a0a0a0;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-family: inherit;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+button.primary {
+  background-color: #6C25FF;
+  color: white;
+}
+
+/* Grayed out button when disabled or secondary form in login */
+button.disabled-look {
+  background-color: #cbcbcb;
+  color: #ffffff;
+}
+
+button.secondary {
+  background-color: #cebafc;
+  color: #1a1a1a;
+}
+
+/* Radio buttons */
+.radio-group-container {
+  margin-top: 5px;
+}
+
+.radio-group-title {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.radio-options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.radio-label input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6C25FF;
+  /* default unselected purple border? The design shows unselected as standard grey, selected as purple with inner dot */
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  outline: none;
+}
+
+.radio-label input[type="radio"]:not(:checked) {
+  border-color: #ccc;
+}
+
+.radio-label input[type="radio"]:checked {
+  border-color: #6c25ff;
+}
+
+.radio-label input[type="radio"]:checked::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #6c25ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Account specific */
+.header-bar {
+  background: #ffffff;
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-bar h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin: 24px 20px 20px 20px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 4px;
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background: #6c25ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  border: 2px solid white;
+}
+
+.profile-info {
+  margin-left: 18px;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-email {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.profile-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  padding: 24px 20px;
+  border-top: 1px dashed #d1d1d1;
+  border-bottom: 1px dashed #d1d1d1;
+}
+
+/* Bottom fixed or padded container */
+.bottom-sticky-button {
+  margin-top: auto;
+  border-top: 1px solid transparent;
+}
